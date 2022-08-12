@@ -1,0 +1,539 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Drafting — Keep Talking and Nobody Explodes Module</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- Icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Icons -->
+    <script src="js/ktane-utils.js"></script>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Drafting</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Drafting.svg" class="diagram">
+                <h2>On the Subject of Drafting</h2>
+                <p class="flavour-text">"You and me, we got this!"</p>
+
+				<p>This module follows the layout for the game League of Legends: a MOBA in which two teams of 5 battle against eachother.</p>
+				<p>League has 156 champions and you will need to pick which champions your team will play. Also known as drafting.</p>
+				<p>The column on the left represents the champions your team has picked.</p>
+				<p>The column on the right represents the champions the enemy team has picked.</p>
+				<p>The six buttons in the middle represent the champions you are allowed to choose from.</p>
+				<p>The draft happends in a set (phase) order:</p>
+				<ul>
+					<li>6 Bans</li>
+					<li>(Team) Left picks 1</li>
+					<li>(Team) Right picks 2</li>
+					<li>Left picks 2</li>
+					<li>Right picks 1</li>
+					<li>4 Bans</li>
+					<li>Right picks 1</li>
+					<li>Left picks 2</li>
+					<li>Right picks 1</li>
+				</ul>
+				
+				<h3>Determining the 6 Bans:</h3>
+				<p>Take the alphabetical position of each of the champions on the buttons in reading order. Multiply them by their correspoding serial #, letters become their alphanumerical position with A=1.</p>
+				<p>Modulo each of the answers by 165 then add 1.</p> 
+				<p>These are the indexes of the champions which have been banned and you may not pick these champions anymore.</p>
+				<p>You may now press any button to continue to the next phase.</p>
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 3</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Drafting</span>
+            </div>
+            <div class="page-content">
+				<h3>Picking champions:</h3>
+				<p>You will need to press the champion that matches all the rules for that specific pick-phase.</p>
+				<p>Pressing the wrong champion will incur a strike, but the selected champion will still be picked.</p>
+
+				<h4>Pick 1</h4>
+				<p>Use the following table with your own team to determine what row en column need to be used in the Champions table.</p>
+				<p>If the champion from the Champions table is available, press it. Otherwise press the next alphabetically available champion.<strong> For each of the answers below, modulo it by 5 then add 1.</strong></p>
+				<table style="margin: 1em auto">
+					<tr>
+						<td></td>
+						<td>Astralis</td>
+						<td>Excel</td>
+						<td>Fnatic</td>
+						<td>G2</td>
+						
+					</tr>
+					<tr>
+						<td><b>row</b></td>
+						<td>Number of Unlit Indicators</td>
+						<td>Number of Battery holders</td>
+						<td>Number of Lit Indicators</td>
+						<td>Last Digit of Serial # + Number of solvable modules</td>
+					</tr>
+					<tr>
+						<td><b>column</b></td>
+						<td>Number of Port Plates</td>
+						<td>Number of Unlit Indicators</td>
+						<td>Number of Battery holders</td>
+						<td>Number of Lit Indicators</td>
+					</tr>
+				</table>
+				<table style="margin: 1em auto">
+					<tr>
+						<td>Cont'd</td>
+						<td>Madlions</td>
+						<td>Misfits</td>
+						<td>Rogue</td>
+						<td>Schalke</td>
+						<td>SK</td>
+						<td>Vitality</td>
+					</tr>
+					<tr>
+						<td><b>row</b></td>
+						<td>Alphabetic position of the first letter of the Serial # (A = 1)</td>
+						<td >Number of Lit Indicators</td>
+						<td>Batteries + Last Digit of Serial #</td>
+						<td>First Digit of Serial #</td>
+						<td>Last Digit of Serial #</td>
+						<td>Number of Port Plates</td>
+					</tr>
+					<tr>
+						<td><b>column</b></td>
+						<td>Last Digit of Serial # + Number of solvable modules</td>
+						<td>Alphabetic position of the first letter of the Serial # (A = 1)</td>
+						<td>Number of Lit Indicators</td>
+						<td>Batteries +  Last Digit of Serial #</td>
+						<td>First Digit of Serial #</td>
+						<td>Last Digit of Serial #</td>
+					</tr>
+				</table>
+				<h4>Champions table</h4>
+				<table>
+					<tr>
+						<td></td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Yuumi</td>
+						<td>Viego</td>
+						<td>Alistar</td>
+						<td>Nocturne</td>
+						<td>Lucian</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Kalista</td>
+						<td>Lee Sin</td>
+						<td>Gwen</td>
+						<td>Syndra</td>
+						<td>LeBlanc</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Tahm Kench</td>
+						<td>Thresh</td>
+						<td>Rumble</td>
+						<td>Xin Zhao</td>
+						<td>Ziggs</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Dr. Mundo</td>
+						<td>Akali</td>
+						<td>Azir</td>
+						<td>Lulu</td>
+						<td>Jayce</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Zed</td>
+						<td>Volibear</td>
+						<td>Varus</td>
+						<td>Ezreal</td>
+						<td>Renekton</td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 3</div>
+        </div>
+		<div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Drafting</span>
+            </div>
+            <div class="page-content">
+				<h4>Pick 2 & 3</h4>
+				<p>Based on the role of the first champion picked, determine the roles of the second and third pick, using the following table:</p>
+
+				<table style="margin: 1em auto">
+					<tr>
+						<th>First pick:</th>
+						<th>Top</th>
+						<th>Jungle</th>
+						<th>Mid</th>
+						<th>Bot</th>
+						<th>Support</th>
+					</tr>
+					<tr>
+						<td><b>2nd pick</b></td>
+						<td>Mid</td>
+						<td>Bot</td>
+						<td>Support</td>
+						<td>Jungle</td>
+						<td>Top</td>
+					</tr>
+					<tr>
+						<td><b>3th pick</b></td>
+						<td>Jungle</td>
+						<td>Mid</td>
+						<td>Top</td>
+						<td>Support</td>
+						<td>Bot</td>
+					</tr>
+				</table>
+				<p>Using the role determined from the table, your second pick will be the first champion with that role, with the same <b>Class</b> and <b>Difficulty</b> as the First pick. </p>
+					
+				<p>Start searching downward in the Champions table (Appendix C) from the First pick until you find a champion to who this applies. If you reach the end of the table, wrap around to the beginning and continue. In all cases, <b>only</b> look at the first Role and Class mentioned. </p>
+								
+				<p>If no champion matches these conditions, pick the first available champion in the determined role. Again, counting from the first pick.</p>
+				
+				<p>Repeat this process for pick 3, but now use the 2nd row instead.</p>
+					<br/>
+				<h3>Determining the 4 Bans:</h3>
+				
+				<p>To determine the four bans, split the serial number up into three groups of two. Also create a group with all characters. Convert each of these groups from base 36 to base 10 (normal numbers). </p><p><strong> For each of the answers, modulo it by the amount of champions and add 1.</strong></p>
+				
+				<p>Each of your answers represents the number of the champion that has been banned. If the champion is already picked or banned the next available champion in alphabetical order is banned instead.</p>
+
+			</div>
+			<div class="page-footer relative-footer">Page 3 of 3</div>
+		</div>
+		<div class="page page-bg-02">
+			<div class="page-header">
+				<span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+				<span class="page-header-section-title">Drafting</span>
+			</div>
+			<div class="page-content">
+				<h3>Picking champions, phase 2:</h3>
+				<p>You will need to press the champion that matches all the rules for that specific pick-phase.</p>
+				<p>Pressing the wrong champion will incur a strike, but the selected champion will still be picked.</p>
+				
+				<h4>Pick 4:</h4>
+				<p>Reading from top to bottom, follow the first rule that applies.</p>
+				
+				<ul>
+					<!--Super prio--> 
+					<li>If the enemy team has a Vi and a Caitlyn, pick Jinx</li>
+					<li>If the enemy team has a Lucian and a Senna, pick Thresh</li>
+					<li>If your team has an Ezreal, pick Zoe unless your team also has a Lux</li> <!--new-->
+					<li>If your team has a Gwen and a Senna, pick Akshan</li> <!--new-->
+					<!--High prio-->
+					<li>If the your team has a Tristana, pick Rumble</li>
+					<li>If the enemy team has a Singed, pick Warwick</li>
+					<li>If the enemy team has a Jhin, pick Zed</li>
+					<li>If the enemy team has an Aatrox, pick Kled</li>
+					<li>If the enemy team has a Pantheon, pick Aurelion Sol</li>
+					<li>If the enemy team has a Viego, pick Gwen and vice versa</li> <!--new-->
+					<li>If your team has a Yuumi, pick Twitch</li> <!--Check how often this happens: This can be moved up. Has now been moved up-->
+					<li>If your team has an Akali, pick Shen</li>
+					<li>If the enemy team has a Ryze, pick Brand and vice versa</li> <!--new-->
+					<li>If your team has a Lucian, pick Senna and vice versa</li> <!--new-->
+					<li>If the enemy team has a Sylas, pick Garen and vice versa</li> <!--new-->
+					<li>If the enemy team has a Diana, pick Leona and vice versa</li> <!--new-->
+					<li>If the enemy team has a Cassiopeia, pick Katarina</li>
+					<li>If the enemy team has a Darius, pick Garen and vice versa</li> <!--new-->
+					<li>If the enemy team has a Teemo, pick Ryze</li> <!--new-->
+					<li>If your team has a Varus or Aatrox, pick Kayn</li>
+					<li>If your team has a Xayah, pick Rakan and vice versa</li>
+					<li>If your team has a Kog'Maw, pick Lulu and vice versa</li>
+					<li>If the enemy team has a Rengar, pick Kha'Zix and vice versa</li>
+					<!--Mid prio-->					
+					<li>If your team has an Ashe, pick Tryndamere</li>
+					<li>If the enemy team has a Seraphine, pick Skarner</li>
+					<li>If the enemy team has a Volibear, pick Ornn</li>
+					<li>If your team has a Heimerdinger, pick Ziggs and vice versa</li> <!--new-->
+					<li>If your team has a Blitzcrank, pick Viktor</li> <!--new-->
+					<li>If the enemy team has an Akali, pick Malzahar</li>
+					<li>If your team has an Ivern, pick Maokai and vice versa</li>
+					<li>If your team has an Trundle, pick Lissandra</li> <!--new-->
+					<li>If your team has a Yone, pick Yasuo and vice versa</li>					
+					<li>If your team has a Neeko, pick Nidalee and vice versa</li>
+					<!--Low prio-->
+					<li>If the enemy team has Evelynn, pick Vayne</li>
+					<li>If your team has a Twisted Fate, pick Graves</li>
+					<li>If your team has a Garen, pick Lux and vice versa</li> <!--new-->
+					<li>If your team has a Wukong, pick Master Yi and vice versa</li> <!--new-->
+					<li>If the enemy team has a Sion, pick Jarvan IV and vice versa</li> <!--new-->
+					<li>If the enemy team has a Urgot, pick Caitlyn</li> <!--new-->
+					<li>If your team has an Malzahar, pick Kog'Maw</li> <!--new-->
+					<li>If your team has an Aphelios, pick Thresh</li>
+					<li>If the enemy team has a Kayle, pick Morgana and vice versa</li>
+					<li>If the enemy team has a Xerath, pick Azir and vice versa</li>
+					<li>If your team has a Draven, pick Blitzcrank and vice versa</li>
+					
+					<li>Otherwise, pick Teemo</li>
+				</ul>
+				<p><i>(flavor:) If your team has a real weapon, pick Jax</i></p>
+			</div>
+			<div class="page-footer relative-footer">Page 3 of 3</div>
+		</div>
+		<div class="page page-bg-02">
+			<div class="page-header">
+				<span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+				<span class="page-header-section-title">Drafting</span>
+			</div>
+			<div class="page-content">
+				<h4>Pick 5:</h4>
+				<p>Based on the first letter of all previous champions you have picked...</p>
+
+			</div>
+			<div class="page-footer relative-footer">Page 3 of 3</div>
+		</div>
+		<div class="page page-bg-03">
+			<div class="page-header">
+				<span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+				<span class="page-header-section-title">Teams</span>
+			</div>
+			<div class="page-content">
+				<h2>Appendix T: Teams</h2>
+				<table style="margin: 1em auto">
+					<tr>
+						<th>Astralis</th>
+						<th>Excel Esports</th>
+						<th>Fnatic</th>
+						<th>G2 Esports</th>
+						<th>MAD Lions</th>
+					</tr>
+					<tr class="teams">
+						<td><img src="img/astralis.png" alt="A red triangle with a star in the middle"/></td>
+						<td><img src="img/Excel.png" alt="The letters X and L"/></td>
+						<td><img src="img/fnatic.png" alt="Two orange V-shapes with a comma in the middle"/></td>
+						<td><img src="img/g2.png" alt="The characters G2 shaped inside a ninja mask"/></td>
+						<td><img src="img/madlions.png" alt="A picture of a lion with the text 'MAD Lions' underneath"/></td>
+					</tr>
+				</table>
+				<table style="margin: 1em auto">
+					<tr>
+						<th>Misfits Gaming</th>
+						<th>Rogue</th>
+						<th>Schalke 04</th>
+						<th>SK Gaming</th>
+						<th>Vitality</th>
+					</tr>
+					<tr class="teams">
+						<td><img src="img/misfits.png" alt="A rabbit with red goggles"/></td>
+						<td><img src="img/rogue.png" alt="A blue hooded figure with orange eyes"/></td>
+						<td><img src="img/schalke04.png" alt="A circle with the character SO4 inside"/></td>
+						<td><img src="img/sk.png" alt="Two V-shapes in opposite corners forming a squares with a 4-like figure inside"/></td>
+						<td><img src="img/vitality.png" alt="A V-shape with a small triangle in the middle"/></td>
+					</tr>
+				</table>
+			</div>
+			<div class="page-footer relative-footer">Page 3 of 3</div>
+		</div>
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Champions</span>
+            </div>
+            <div class="page-content">
+                <h2>Appendix C: Champions</h2>
+				<table>
+					<tr><th>nth champion</th><th>Champion Name</th><th>Roles</th><th>Class</th><th>Difficulty</th></tr>
+					<tr><td>1</td><td>Aatrox</td><td>top, mid</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>2</td><td>Ahri</td><td>mid</td><td>Assassin, Mage</td><td>★★</td></tr>
+					<tr><td>3</td><td>Akali</td><td>top, mid</td><td>Assassin</td><td>★★</td></tr>
+					<tr><td>4</td><td>Akshan</td><td>top, mid, bot</td><td>Assassin, Marksman</td><td>★</td></tr>
+					<tr><td>5</td><td>Alistar</td><td>support</td><td>Support, Tank</td><td>★★</td></tr>
+					<tr><td>6</td><td>Amumu</td><td>jungle</td><td>Mage, Tank</td><td>★</td></tr>
+					<tr><td>7</td><td>Anivia</td><td>mid, support</td><td>Mage, Support</td><td>★★★</td></tr>
+					<tr><td>8</td><td>Annie</td><td>mid</td><td>Mage</td><td>★★</td></tr>
+					<tr><td>9</td><td>Aphelios</td><td>bot</td><td>Marksman</td><td>★★★</td></tr>
+					<tr><td>10</td><td>Ashe</td><td>bot</td><td>Marksman, Support</td><td>★★</td></tr>
+					<tr><td>11</td><td>Aurelion Sol</td><td>mid</td><td>Mage</td><td>★★</td></tr>
+					<tr><td>12</td><td>Azir</td><td>mid</td><td>Mage, Marksman</td><td>★★★</td></tr>
+					<tr><td>13</td><td>Bard</td><td>support</td><td>Mage, Support</td><td>★★★</td></tr>
+					<tr><td>14</td><td>Blitzcrank</td><td>support</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>15</td><td>Brand</td><td>support</td><td>Mage</td><td>★★</td></tr>
+					<tr><td>16</td><td>Braum</td><td>support</td><td>Support, Tank</td><td>★</td></tr>
+					<tr><td>17</td><td>Caitlyn</td><td>bot</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>18</td><td>Camille</td><td>top</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>19</td><td>Cassiopeia</td><td>top, mid, bot</td><td>Mage</td><td>★★★</td></tr>
+					<tr><td>20</td><td>Cho’Gath</td><td>top</td><td>Mage, Tank</td><td>★★</td></tr>
+					<tr><td>21</td><td>Corki</td><td>mid</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>22</td><td>Darius</td><td>top</td><td>Fighter, Tank</td><td>★</td></tr>
+					<tr><td>23</td><td>Diana</td><td>jungle, mid</td><td>Fighter, Mage</td><td>★★</td></tr>
+					<tr><td>24</td><td>Dr. Mundo</td><td>top</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>25</td><td>Draven</td><td>bot</td><td>Marksman</td><td>★★★</td></tr>
+					<tr><td>26</td><td>Ekko</td><td>jungle, mid</td><td>Assassin, Fighter</td><td>★★★</td></tr>
+					<tr><td>27</td><td>Elise</td><td>jungle</td><td>Fighter, Mage</td><td>★★★</td></tr>
+					<tr><td>28</td><td>Evelynn</td><td>jungle</td><td>Assassin, Mage</td><td>★★★</td></tr>
+					<tr><td>29</td><td>Ezreal</td><td>bot</td><td>Mage, Marksman</td><td>★★</td></tr>
+					<tr><td>30</td><td>Fiddlesticks</td><td>jungle, support</td><td>Mage, Support</td><td>★★★</td></tr>
+					<tr><td>31</td><td>Fiora</td><td>top</td><td>Assassin, Fighter</td><td>★</td></tr>
+					<tr><td>32</td><td>Fizz</td><td>mid</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>33</td><td>Galio</td><td>mid, support</td><td>Mage, Tank</td><td>★★</td></tr>
+					<tr><td>34</td><td>Gangplank</td><td>top</td><td>Fighter</td><td>★★★</td></tr>
+					<tr><td>35</td><td>Garen</td><td>top, mid</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>36</td><td>Gnar</td><td>top</td><td>Fighter, Tank</td><td>★★★</td></tr>
+					<tr><td>37</td><td>Gragas</td><td>top, jungle, support</td><td>Fighter, Mage</td><td>★★</td></tr>
+					<tr><td>38</td><td>Graves</td><td>jungle, mid</td><td>Marksman</td><td>★</td></tr>
+					<tr><td>39</td><td>Gwen</td><td>top, jungle</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>40</td><td>Hecarim</td><td>jungle</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>41</td><td>Heimerdinger</td><td>top, mid</td><td>Mage, Support</td><td>★★★</td></tr>
+					<tr><td>42</td><td>Illaoi</td><td>top</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>43</td><td>Irelia</td><td>top, mid</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>44</td><td>Ivern</td><td>jungle</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>45</td><td>Janna</td><td>support</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>46</td><td>Jarvan IV</td><td>top, jungle</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>47</td><td>Jax</td><td>top, jungle</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>48</td><td>Jayce</td><td>top, mid</td><td>Fighter, Marksman</td><td>★★</td></tr>
+					<tr><td>49</td><td>Jhin</td><td>bot</td><td>Mage, Marksman</td><td>★★</td></tr>
+					<tr><td>50</td><td>Jinx</td><td>bot</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>51</td><td>Kai’Sa</td><td>bot</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>52</td><td>Kalista</td><td>bot</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>53</td><td>Karma</td><td>support</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>54</td><td>Karthus</td><td>jungle</td><td>Mage</td><td>★★</td></tr>
+					<tr><td>55</td><td>Kassadin</td><td>mid</td><td>Assassin, Mage</td><td>★★★</td></tr>
+					<tr><td>56</td><td>Katarina</td><td>mid</td><td>Assassin, Mage</td><td>★★★</td></tr>
+					<tr><td>57</td><td>Kayle</td><td>top</td><td>Fighter, Support</td><td>★★</td></tr>
+					<tr><td>58</td><td>Kayn</td><td>jungle</td><td>Assassin, Fighter</td><td>★★★</td></tr>
+					<tr><td>59</td><td>Kennen</td><td>top, mid</td><td>Mage, Marksman</td><td>★★</td></tr>
+					<tr><td>60</td><td>Kha’Zix</td><td>jungle</td><td>Assassin</td><td>★★</td></tr>
+					<tr><td>61</td><td>Kindred</td><td>jungle</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>62</td><td>Kled</td><td>top, mid</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>63</td><td>Kog’Maw</td><td>bot</td><td>Mage, Marksman</td><td>★★</td></tr>
+					<tr><td>64</td><td>LeBlanc</td><td>mid</td><td>Assassin, Mage</td><td>★★★</td></tr>
+					<tr><td>65</td><td>Lee Sin</td><td>jungle</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>66</td><td>Leona</td><td>support</td><td>Support, Tank</td><td>★★</td></tr>
+					<tr><td>67</td><td>Lillia</td><td>top, jungle</td><td>Fighter, Mage</td><td>★★★</td></tr>
+					<tr><td>68</td><td>Lissandra</td><td>mid</td><td>Mage</td><td>★★</td></tr>
+					<tr><td>69</td><td>Lucian</td><td>top, mid, bot</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>70</td><td>Lulu</td><td>support</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>71</td><td>Lux</td><td>mid, support</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>72</td><td>Malphite</td><td>top, mid</td><td>Fighter, Tank</td><td>★</td></tr>
+					<tr><td>73</td><td>Malzahar</td><td>mid</td><td>Assassin, Mage</td><td>★★</td></tr>
+					<tr><td>74</td><td>Maokai</td><td>top, support</td><td>Mage, Tank</td><td>★</td></tr>
+					<tr><td>75</td><td>Master yi</td><td>jungle</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>76</td><td>Miss Fortune</td><td>bot</td><td>Marksman</td><td>★</td></tr>
+					<tr><td>77</td><td>Mordekaiser</td><td>top</td><td>Fighter</td><td>★★</td></tr>
+					<tr><td>78</td><td>Morgana</td><td>support</td><td>Mage, Support</td><td>★</td></tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 5 of 3</div>
+        </div>
+		<div class="page page-bg-05">
+			<div class="page-header">
+				<span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+				<span class="page-header-section-title">Champions</span>
+			</div>
+			<div class="page-content">
+				<h2>Appendix C: Champions (Cont'd)</h2>
+				<table>
+					<tr><th>nth champion</th><th>Champion Name</th><th>Roles</th><th>Class</th><th>Difficulty</th></tr>
+					<tr><td>79</td><td>Nami</td><td>support</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>80</td><td>Nasus</td><td>top</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>81</td><td>Nautilus</td><td>support</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>82</td><td>Neeko</td><td>mid, support</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>83</td><td>Nidalee</td><td>jungle</td><td>Assassin, Mage</td><td>★★★</td></tr>
+					<tr><td>84</td><td>Nocturne</td><td>jungle</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>85</td><td>Nunu & Willump</td><td>jungle, mid</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>86</td><td>Olaf</td><td>jungle</td><td>Fighter, Tank</td><td>★</td></tr>
+					<tr><td>87</td><td>Orianna</td><td>mid</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>88</td><td>Ornn</td><td>top</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>89</td><td>Pantheon</td><td>top, mid, support</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>90</td><td>Poppy</td><td>top, jungle, support</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>91</td><td>Pyke</td><td>support</td><td>Assassin, Support</td><td>★★</td></tr>
+					<tr><td>92</td><td>Qiyana</td><td>mid</td><td>Assassin, Fighter</td><td>★★★</td></tr>
+					<tr><td>93</td><td>Quinn</td><td>top</td><td>Assassin, Marksman</td><td>★★</td></tr>
+					<tr><td>94</td><td>Rakan</td><td>support</td><td>Support</td><td>★★</td></tr>
+					<tr><td>95</td><td>Rammus</td><td>jungle</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>96</td><td>Rek’Sai</td><td>jungle</td><td>Fighter</td><td>★</td></tr>
+					<tr><td>97</td><td>Rell</td><td>support</td><td>Tank</td><td>★</td></tr>
+					<tr><td>98</td><td>Renekton</td><td>top, mid</td><td>Fighter, Tank</td><td>★</td></tr>
+					<tr><td>99</td><td>Rengar</td><td>top, jungle</td><td>Assassin, Fighter</td><td>★★★</td></tr>
+					<tr><td>100</td><td>Riven</td><td>top, mid</td><td>Assassin, Fighter</td><td>★★★</td></tr>
+					<tr><td>101</td><td>Rumble</td><td>top, jungle, mid</td><td>Fighter, Mage</td><td>★★★</td></tr>
+					<tr><td>102</td><td>Ryze</td><td>top, mid</td><td>Fighter, Mage</td><td>★★</td></tr>
+					<tr><td>103</td><td>Samira</td><td>bot</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>104</td><td>Sejuani</td><td>jungle</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>105</td><td>Senna</td><td>support</td><td>Marksman, Support</td><td>★★</td></tr>
+					<tr><td>106</td><td>Seraphine</td><td>support</td><td>Mage, Support</td><td>★</td></tr>
+					<tr><td>107</td><td>Sett</td><td>top, mid, support</td><td>Fighter, Tank</td><td>★</td></tr>
+					<tr><td>108</td><td>Shaco</td><td>jungle, support</td><td>Assassin</td><td>★★★</td></tr>
+					<tr><td>109</td><td>Shen</td><td>top, support</td><td>Tank</td><td>★★</td></tr>
+					<tr><td>110</td><td>Shyvana</td><td>jungle</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>111</td><td>Singed</td><td>top</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>112</td><td>Sion</td><td>top</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>113</td><td>Sivir</td><td>bot</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>114</td><td>Skarner</td><td>jungle</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>115</td><td>Sona</td><td>support</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>116</td><td>Soraka</td><td>support</td><td>Mage, Support</td><td>★</td></tr>
+					<tr><td>117</td><td>Swain</td><td>bot, support</td><td>Fighter, Mage</td><td>★★★</td></tr>
+					<tr><td>118</td><td>Sylas</td><td>top, mid</td><td>Assassin, Mage</td><td>★★</td></tr>
+					<tr><td>119</td><td>Syndra</td><td>mid, bot</td><td>Mage, Support</td><td>★★★</td></tr>
+					<tr><td>120</td><td>Tahm Kench</td><td>top, support</td><td>Support, Tank</td><td>★★</td></tr>
+					<tr><td>121</td><td>Taliyah</td><td>jungle</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>122</td><td>Talon</td><td>mid</td><td>Assassin</td><td>★★</td></tr>
+					<tr><td>123</td><td>Taric</td><td>support</td><td>Fighter, Support</td><td>★</td></tr>
+					<tr><td>124</td><td>Teemo</td><td>top</td><td>Assassin, Marksman</td><td>★★</td></tr>
+					<tr><td>125</td><td>Thresh</td><td>support</td><td>Fighter, Support</td><td>★★</td></tr>
+					<tr><td>126</td><td>Tristana</td><td>bot</td><td>Assassin, Marksman</td><td>★★</td></tr>
+					<tr><td>127</td><td>Trundle</td><td>top, jungle, support</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>128</td><td>Tryndamere</td><td>top, mid</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>129</td><td>Twisted Fate</td><td>mid</td><td>Mage</td><td>★★★</td></tr>
+					<tr><td>130</td><td>Twitch</td><td>bot</td><td>Assassin, Marksman</td><td>★★</td></tr>
+					<tr><td>131</td><td>Udyr</td><td>jungle</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>132</td><td>Urgot</td><td>top</td><td>Fighter, Tank</td><td>★★★</td></tr>
+					<tr><td>133</td><td>Varus</td><td>bot</td><td>Mage, Marksman</td><td>★</td></tr>
+					<tr><td>134</td><td>Vayne</td><td>top, bot</td><td>Assassin, Marksman</td><td>★★★</td></tr>
+					<tr><td>135</td><td>Veigar</td><td>mid, support</td><td>Mage</td><td>★★</td></tr>
+					<tr><td>136</td><td>Vel’Koz</td><td>support</td><td>Mage</td><td>★★★</td></tr>
+					<tr><td>137</td><td>Vi</td><td>jungle</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>138</td><td>Viego</td><td>jungle, mid</td><td>Assassin, Fighter</td><td>★★</td></tr>
+					<tr><td>139</td><td>Viktor</td><td>mid</td><td>Mage</td><td>★★★</td></tr>
+					<tr><td>140</td><td>Vladimir</td><td>top, mid</td><td>Mage</td><td>★★</td></tr>
+					<tr><td>141</td><td>Volibear</td><td>top, jungle</td><td>Fighter, Tank</td><td>★</td></tr>
+					<tr><td>142</td><td>Warwick</td><td>top, jungle</td><td>Fighter, Tank</td><td>★</td></tr>
+					<tr><td>143</td><td>Wukong</td><td>top</td><td>Fighter, Tank</td><td>★</td></tr>
+					<tr><td>144</td><td>Xayah</td><td>bot</td><td>Marksman</td><td>★★</td></tr>
+					<tr><td>145</td><td>Xerath</td><td>mid, support</td><td>Mage</td><td>★★★</td></tr>
+					<tr><td>146</td><td>Xin Zhao</td><td>jungle</td><td>Assassin, Fighter</td><td>★</td></tr>
+					<tr><td>147</td><td>Yasuo</td><td>top, mid, bot</td><td>Assassin, Fighter</td><td>★★★</td></tr>
+					<tr><td>148</td><td>Yone</td><td>top, mid</td><td>Assassin, Fighter</td><td>★★★</td></tr>
+					<tr><td>149</td><td>Yorick</td><td>top</td><td>Fighter, Tank</td><td>★★</td></tr>
+					<tr><td>150</td><td>Yuumi</td><td>support</td><td>Mage, Support</td><td>★</td></tr>
+					<tr><td>151</td><td>Zac</td><td>top, jungle, support</td><td>Fighter, Tank</td><td>★★★</td></tr>
+					<tr><td>152</td><td>Zed</td><td>mid</td><td>Assassin</td><td>★★</td></tr>
+					<tr><td>153</td><td>Ziggs</td><td>mid, bot</td><td>Mage</td><td>★★</td></tr>
+					<tr><td>154</td><td>Zilean</td><td>support</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>155</td><td>Zoe</td><td>mid</td><td>Mage, Support</td><td>★★</td></tr>
+					<tr><td>156</td><td>Zyra</td><td>support</td><td>Mage, Support</td><td>★★</td></tr>
+				</table>
+			</div>
+			<div class="page-footer relative-footer">Page 6 of 3</div>
+		</div>
+    </div>
+</body>
+</html>
